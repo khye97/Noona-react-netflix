@@ -1,10 +1,11 @@
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import AppLayout from './layout/AppLayout';
 import Homepage from './pages/Homepage/Homepage';
 import MoviePage from './pages/Movies/MoviePage';
 import MovieDetailPage from './pages/MovieDetail/MovieDetailPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 // 메인 홈페이지 "/"
 // 전체 영화 보여주는 페이지 (검색 기능) "/movies" "/movies?q=검색조건"
