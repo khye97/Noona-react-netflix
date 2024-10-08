@@ -9,7 +9,6 @@ const api = axios.create({
     Accept: 'application/json',
     Authorization: `Bearer ${API_KEY}`
   }
-  
 });
 
 

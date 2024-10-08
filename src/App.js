@@ -14,6 +14,7 @@ import './App.css';
 
 function App() {
   return (
+    <>
     <Routes>
       <Route path='/' element={<AppLayout />}>
         <Route index element={<Homepage />} />
@@ -24,6 +25,7 @@ function App() {
       </Route>
       <Route path='*' element={<NotFoundPage />} />
     </Routes>
+    </>
   );
 }
 

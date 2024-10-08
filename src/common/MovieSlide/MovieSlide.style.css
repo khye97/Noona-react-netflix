@@ -1,0 +1,26 @@
+.carousel-container {
+  overflow: hidden;
+  height: 315px;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px){
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px){
+  .carousel-container {
+    height: 385px;
+  }
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+  .carousel-container {
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width: 0){
+  .carousel-container {
+    height: 380px;
+  }
+}

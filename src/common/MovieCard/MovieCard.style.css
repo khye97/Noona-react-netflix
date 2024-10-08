@@ -1,0 +1,123 @@
+.movie-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 280px;
+  width: 190px;
+  transition: all 0.5s;
+}
+
+.movie-card:hover {
+  transform: scale(1.1) translateZ(20px);
+  z-index: 2;
+}
+
+.movie-card-content {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(43, 41, 41, 0.9);
+  transition: all 0.5s;
+  overflow-wrap: break-word;
+  color: #fff;
+  padding: 20px;
+}
+
+.movie-card-content:hover {
+  opacity: 1;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.badge-genre-box {
+  margin-bottom: 10px;
+}
+
+.badge-box {
+  display: flex;
+}
+
+.badge-box .badge-age {
+  margin-right: 20px;
+}
+
+.badge-genre,
+.badge-age {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-genre {
+  background-color: #e50914;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+.badge-age {
+  background-color: gold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.score-box {
+  margin-bottom: 8px;
+}
+
+.score {
+  color: gold;
+  margin-right: 9px;
+}
+
+.like {
+  font-size: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.share {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1440px) and (min-width: 1025px){
+  .movie-card {
+    width: 190px;
+    height: 280px;
+  }
+  .title {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px){
+  .movie-card {
+    width: 235px;
+    height: 350px;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+  .movie-card {
+    width: 210px;
+    height: 330px;
+  }
+  .title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width: 0){
+  .movie-card {
+    width: 215px;
+    height: 345px;
+  }
+}

@@ -1,0 +1,44 @@
+.dropdown {
+  display: flex;
+  margin-right: 18px;
+  margin-bottom: 15px;
+}
+
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.container-custom.movie-page {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.pagination-box {
+  display: flex;
+  justify-content: center;
+}
+
+.page-item.active > a {
+  background-color: #e50914;
+  border: 1px solid #fff;
+
+}
+
+.page-item > a {
+  color: #fff;
+  background-color: #111;
+}
+
+.page-item:hover > a {
+  background-color: #800000;
+  color: #fff;
+}
+
+.page-item.disabled > a {
+  color: #fff;
+  background-color: gray;
+}
+

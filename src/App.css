@@ -1,12 +1,20 @@
 * {
   font-family: "Noto Sans", system-ui;
+  box-sizing: border-box;
 }
 
 body {
   height: 100vh;
-  background-color: #ccc;
+  /* background-color: black; */
+  background-color: #000;
 }
 
 .container-custom {
   padding-top: 70px;
+}
+
+.section-title {
+  color: #fff;
+  margin-left: 30px;
+  margin-top: 100px;
 }

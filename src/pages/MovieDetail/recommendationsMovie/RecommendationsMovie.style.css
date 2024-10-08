@@ -1,0 +1,54 @@
+.recommendation-box {
+  padding: 0 200px;
+}
+
+.recommendation-box .title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.similar-movie-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.similar-movie-box .movie-card {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.similar-movie-box .movie-card-content .title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .recommendation-box {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+  .recommendation-box {
+    padding: 0 30px;
+  }
+
+  .similar-movie-box .movie-card {
+    margin-right: 20px;
+    width: 195px;
+    height: 300px;
+  }
+
+}
+
+@media screen and (max-width: 480px) and (min-width: 0px) {
+  .recommendation-box {
+    padding: 0 25px;
+  }
+  .similar-movie-box .movie-card {
+    margin-right: 20px;
+    width: 180px;
+    height: 265px;
+  }
+}

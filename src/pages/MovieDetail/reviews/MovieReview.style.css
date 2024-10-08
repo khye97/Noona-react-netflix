@@ -1,0 +1,54 @@
+.review-box {
+  margin-bottom: 100px;
+}
+
+.review-box .title {
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+.review-item {
+  border: 2px solid red;
+  border-radius: 10px;
+  color: #fff;
+  padding: 30px;
+  margin: 20px 30px 20px 30px;
+}
+
+.review-item .user-box {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.review-item .user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.review-item .user-name {
+  color: #fff;
+  font-size: 18px;
+}
+
+.review-item .date {
+  font-size: 14px;
+}
+
+.review-item .show-more-btn {
+  border: 1px solid red;
+  background-color: red;
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px 10px;
+  transition: all 0.3s;
+}
+
+.review-item .show-more-btn:hover {
+  background-color: #111;
+}
+
+.review-item .review-box {
+  margin-bottom: 20px;
+}
