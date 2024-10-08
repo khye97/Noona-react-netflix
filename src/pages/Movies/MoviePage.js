@@ -25,10 +25,13 @@ function MoviePage (){
   const [page, setPage] = useState(1);
   const {data: searchData, isLoading, isError, error} = useSearchMovieQuery({keyword, page});
   const {data: genreData} = useMovieGenreQuery();
+  console.log("장르원본", genreData);
+  
 
-
-  let genreNameList = genreData && genreData.map((item) => {return item.name});
-  console.log("데이터", searchData);
+  let genreNameList = genreData && genreData.map((item) => { return item.name });
+  // console.log("데이터", searchData);
+  // console.log("장르 네임 리스트", genreNameList);
+  
 
   const [movieList, setMovieList] = useState([]);
   useEffect(() => {
@@ -52,6 +55,39 @@ function MoviePage (){
   const handlePageClick = ({selected}) => {
     setPage(selected + 1)
   }
+
+  // function filterGenre (item){
+  //   let genreName = item;
+  //   //console.log("필터 선택한 값", id);
+  //   let array = [...searchData.results];
+  //   console.log("어레이인가?", Array.isArray(array));
+    
+  //   array = array.map((item, index) => {
+  //     let genre_ids = item.genre_ids.map((id) => {
+  //       let result = genreData.find((genre) => genre.id === id )
+  //       return result.name;
+  //     })
+  //     item.genre_ids = genre_ids;
+  //     return item;
+  //   })
+  //   console.log("바꾼 어레이", array);
+    
+  //   let newArray = array.filter((item) => {
+  //     return item.genre_ids.includes(genreName)
+  //   })
+  //   console.log("필터링 어레이", newArray); 
+  //   setMovieList(newArray);
+  // }
+
+  const filterGenre = (selectedGenre) => {
+    const filteredMovies = searchData.results.filter(movie => 
+      movie.genre_ids.some(id => genreData.find(genre => genre.id === id)?.name === selectedGenre)
+    );
+    //console.log("필터링된 영화", filteredMovies);
+    
+    setMovieList(filteredMovies);
+  };
+
 
   // function copyData (){
   //   let copy = {...searchData.results};
@@ -108,7 +144,8 @@ function MoviePage (){
               장르검색
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              {genreNameList.map((item, index) => { return <Dropdown.Item href="#" key={index}>{item}</Dropdown.Item>})}
+            {/* <Dropdown.Item>Action</Dropdown.Item> */}
+              {genreNameList.map((item, index) => { return <Dropdown.Item href="#" key={index} value={item} onClick={() => { filterGenre(item) }}>{item}</Dropdown.Item>})}
             </Dropdown.Menu>
           </Dropdown>
         </div>
