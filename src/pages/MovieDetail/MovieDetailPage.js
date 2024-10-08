@@ -71,7 +71,7 @@ function MovieDetailPage (){
         </Modal.Footer>
       </Modal>
     <div className='container-custom movie-detail-page'>
-      <div className="image-box" style={{background: `linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(6,6,6,0) 70%)`, backgroundImage: `url(https://image.tmdb.org/t/p/original${DetailData.backdrop_path})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
+      <div className="image-box" style={{background: `linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(6,6,6,0) 70%), url(https://image.tmdb.org/t/p/original${DetailData.backdrop_path})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
 
       <div className='center-box'>
         <div className="detail-content-box">
